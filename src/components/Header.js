@@ -4,7 +4,7 @@ import useCurrentPathName from "../utils/useCurrentPathName";
 const Header = () => {
   return (
     <header className="sticky top-0 z-10  ">
-      <nav className="max-w-6xl mx-auto px-3 h-20 flex justify-between items-center border border-cyan-900">
+      <nav className="max-w-6xl mx-auto px-3 h-20 flex justify-between items-center">
         <div>
           <Link to="/">
             <img
