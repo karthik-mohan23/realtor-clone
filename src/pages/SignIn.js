@@ -1,5 +1,7 @@
 import { useState } from "react";
+import OAuth from "../utils/OAuth";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -30,7 +32,7 @@ const SignIn = () => {
               id="email"
               value={email}
               onChange={onChange}
-              className="border border-gray-400 px-2  h-8 py-2 rounded-sm transition ease-in-out outline-blue-300 mb-8 w-full"
+              className="border border-gray-400 px-2  h-8 py-2 rounded-md transition ease-in-out outline-blue-300 mb-8 w-full"
             />
           </div>
 
@@ -41,7 +43,7 @@ const SignIn = () => {
               onChange={onChange}
               id="password"
               placeholder="Enter password"
-              className="border border-gray-400 px-2 h-8 py-2 rounded-sm transition ease-in-out outline-blue-300 mb-8 w-full"
+              className="border border-gray-400 px-2 h-8 py-2 rounded-md transition ease-in-out outline-blue-300 mb-8 w-full"
             />
             {showPassword ? (
               <AiFillEye
@@ -59,11 +61,32 @@ const SignIn = () => {
           <div>
             <button
               type="submit"
-              className="bg-blue-500 text-xl text-white py-2 hover:bg-blue-600 duration-300 w-full">
+              className="bg-blue-500 text-xl text-white py-2 hover:bg-blue-600 duration-300 w-full rounded-md">
               Sign in
             </button>
           </div>
         </form>
+        <div className="flex justify-between items-center mt-6">
+          <p>
+            Don't have a account ?{" "}
+            <Link
+              to="/sign-up"
+              className="text-red-600 hover:text-red-700 duration-300">
+              Register
+            </Link>
+          </p>
+          <p>
+            <Link
+              to="/forgot-password"
+              className="text-blue-500 hover:text-blue-800 duration-300">
+              Forgot password ?
+            </Link>
+          </p>
+        </div>
+        <div className="my-4 flex items-center before:border-t  before:flex-1  before:border-gray-300 after:border-t  after:flex-1  after:border-gray-300">
+          <p className="text-center font-semibold mx-4">OR</p>
+        </div>
+        <OAuth />
       </div>
     </section>
   );
