@@ -23,7 +23,7 @@ const SignUp = () => {
 
   return (
     <section>
-      <h1 className="text-3xl text-center mt-20 font-bold">Sign </h1>
+      <h1 className="text-3xl text-center mt-20 font-bold">Sign Up</h1>
       <div className="w-[90%] max-w-md mx-auto mt-16">
         <form className="w-full ">
           <div className="w-full ">
